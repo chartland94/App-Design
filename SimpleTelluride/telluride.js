@@ -61,7 +61,16 @@ serveFile( filename, req, res );
 }
 var server = http.createServer( serverFn );
 
-server.listen( 8181 );
+if ( process.argv.length < 3 )
+{
+	var port = 8180;
+}
+
+else
+{
+	port = process.argv[2];
+}
+server.listen( port);
 
 
 
