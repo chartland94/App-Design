@@ -6,9 +6,13 @@ if ( process.argv.length < 3 )
 	console.log("Error: You did not provide enough arguments, this program requires 3.");
 	process.exit(1);
 }
-if ( process.argv.length > 3)
+else if( process.argv.length < 4)
 {
-	console.log("Warning: You provided more arguments than necessary, only the first three will be used by the program.");
+	console.log("Warning: This program can use up to four arguments to be fun to full potential.")
+}
+if ( process.argv.length > 4)
+{
+	console.log("Warning: You provided more arguments than necessary, only the first four will be used by the program.");
 }
 var args = process.argv;
 /* What if the file doesn't exist? */
